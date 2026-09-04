@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funeraria La Luz | Servicios Exequiales</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#14100e',
+                        cardBg: '#231b17',
+                        gold: '#d4af37',
+                        goldHover: '#c19b2e',
+                        mainText: '#f5f2eb',
+                        mutedText: '#b5aca3',
+                        borderGold: 'rgba(212, 175, 55, 0.25)'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Alpine.js CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3x.dev/dist/cdn.min.js"></script>
+</head>
+<body class="bg-darkBg text-mainText font-sans antialiased selection:bg-gold selection:text-darkBg">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-darkBg/95 backdrop-blur border-b border-borderGold">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <h1 class="font-serif text-2xl text-gold font-semibold">Funeraria La Luz</h1>
+            <nav class="hidden md:flex gap-8 text-sm">
+                <a href="#inicio" class="hover:text-gold transition">Inicio</a>
+                <a href="#servicios" class="hover:text-gold transition">Servicios</a>
+                <a href="#obituarios" class="hover:text-gold transition">Obituarios</a>
+                <a href="#prevision" class="hover:text-gold transition">Previsión</a>
+                <a href="#contacto" class="border border-gold text-gold px-4 py-2 rounded-sm hover:bg-gold hover:text-darkBg transition">Contacto 24/7</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="inicio" class="py-32 px-6 text-center border-b border-borderGold bg-[linear-gradient(rgba(20,16,14,0.85),rgba(20,16,14,0.92))]">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-4xl md:text-5xl mb-6 leading-tight">Acompañándoles con respeto y dignidad en los momentos más difíciles</h2>
+            <p class="text-mutedText text-lg mb-8">Brindamos apoyo integral y profesional las 24 horas del día.</p>
+            <a href="tel:+520000000000" class="inline-block bg-gold text-darkBg font-semibold px-8 py-3 rounded-sm hover:bg-goldHover transition">Línea de Atención Inmediata</a>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-24 px-6 max-w-7xl mx-auto text-center">
+        <h3 class="font-serif text-3xl md:text-4xl text-gold mb-12">Nuestros Servicios</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+            <div class="bg-cardBg p-8 rounded-sm border border-borderGold hover:border-gold transition">
+                <h4 class="font-serif text-xl text-gold mb-4">Servicios Funerales</h4>
+                <p class="text-mutedText text-sm">Salas de velación confortables y asistencia en trámites legales y de traslado con la mayor calidez.</p>
+            </div>
+            <div class="bg-cardBg p-8 rounded-sm border border-borderGold hover:border-gold transition">
+                <h4 class="font-serif text-xl text-gold mb-4">Cremación</h4>
+                <p class="text-mutedText text-sm">Procesos respetuosos con opciones de urnas conmemorativas y homenajes personalizados a su elección.</p>
+            </div>
+            <div class="bg-cardBg p-8 rounded-sm border border-borderGold hover:border-gold transition">
+                <h4 class="font-serif text-xl text-gold mb-4">Previsión</h4>
+                <p class="text-mutedText text-sm">Planes a futuro diseñados para brindar tranquilidad y protección anticipada a su familia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Obituarios -->
+    <section id="obituarios" class="py-24 px-6 bg-[#1a1412] border-t border-b border-borderGold">
+        <div class="max-w-7xl mx-auto text-center">
+            <h3 class="font-serif text-3xl md:text-4xl text-gold mb-4">Esquelas y Obituarios</h3>
+            <p class="text-mutedText mb-12">Consulte los servicios de velación activos y acompañe a las familias en su duelo.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
+                <div class="bg-cardBg p-8 rounded-sm border border-borderGold">
+                    <h4 class="font-serif text-xl text-gold mb-1">C. María Elena Gómez R.</h4>
+                    <p class="text-xs text-mutedText mb-4">1945 – 2026</p>
+                    <p class="text-sm mb-6"><strong>Sala:</strong> Capilla Principal #2<br><strong>Homenaje:</strong> Hoy a las 16:00 hrs.</p>
+                    <button @click="alert('Funcionalidad para enviar flores o dejar condolencias.')" class="border border-gold text-gold text-sm px-4 py-2 rounded-sm hover:bg-gold hover:text-darkBg transition">Enviar Condolencias</button>
+                </div>
+                <div class="bg-cardBg p-8 rounded-sm border border-borderGold">
+                    <h4 class="font-serif text-xl text-gold mb-1">Ing. Roberto Martínez S.</h4>
+                    <p class="text-xs text-mutedText mb-4">1958 – 2026</p>
+                    <p class="text-sm mb-6"><strong>Sala:</strong> Capilla Jardín #1<br><strong>Homenaje:</strong> Mañana a las 10:00 hrs.</p>
+                    <button @click="alert('Funcionalidad para enviar flores o dejar condolencias.')" class="border border-gold text-gold text-sm px-4 py-2 rounded-sm hover:bg-gold hover:text-darkBg transition">Enviar Condolencias</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cotizador Interactivo con Alpine.js -->
+    <section id="prevision" class="py-24 px-6 max-w-3xl mx-auto text-center" x-data="{ plan: 15000, meses: 12, get cuota() { return Math.round((this.plan * 1.15) / this.meses).toLocaleString(); } }">
+        <h3 class="font-serif text-3xl md:text-4xl text-gold mb-4">Calculadora de Previsión</h3>
+        <p class="text-mutedText mb-8">Estime un plan adaptado a sus necesidades de forma rápida y confidencial.</p>
+        
+        <div class="bg-cardBg p-8 md:p-12 rounded-sm border border-borderGold text-left space-y-6">
+            <div>
+                <label class="block mb-2 text-sm font-medium">Seleccione el Tipo de Servicio:</label>
+                <select x-model.number="plan" class="w-full p-3 bg-darkBg border border-borderGold rounded-sm text-mainText focus:outline-none focus:border-gold">
+                    <option value="15000">Servicio Funerario Tradicional</option>
+                    <option value="12000">Servicio de Cremación Directa</option>
+                    <option value="22000">Plan de Previsión Familiar Completo</option>
+                </select>
+            </div>
+            <div>
+                <label class="block mb-2 text-sm font-medium">Plazo de Financiamiento:</label>
+                <select x-model.number="meses" class="w-full p-3 bg-darkBg border border-borderGold rounded-sm text-mainText focus:outline-none focus:border-gold">
+                    <option value="12">12 Meses</option>
+                    <option value="24">24 Meses</option>
+                    <option value="36">36 Meses</option>
+                </select>
+            </div>
+            <div class="pt-6 border-t border-borderGold text-center text-lg">
+                Estimado mensual aproximado: <span class="text-gold font-bold" x-text="`$${cuota} MXN`"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-24 px-6 bg-[#1a1412] text-center border-t border-borderGold">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="font-serif text-3xl md:text-4xl text-gold mb-4">Contacto y Ubicación</h3>
+            <p class="text-mutedText mb-8">Estamos disponibles las 24 horas para atenderle de forma inmediata.</p>
+            <div class="inline-block bg-cardBg p-8 rounded-sm border border-borderGold text-left space-y-2 text-sm">
+                <p><strong>Teléfono:</strong> +52 (000) 000-0000</p>
+                <p><strong>Dirección:</strong> Av. Principal #123, Ciudad</p>
+                <p><strong>Horario:</strong> Abierto 24 horas, 365 días al año</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-xs text-mutedText border-t border-white/5">
+        <p>&copy; 2026 Funeraria La Luz. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
